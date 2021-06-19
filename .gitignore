@@ -8,3 +8,4 @@
 /src/backend/Cart/API/Properties/PublishProfiles
 /src/backend/Cart/API/Properties/ServiceDependencies/rm-shop-cart-api - Zip Deploy/profile.arm.json
 /src/backend/Product/api/Properties/PublishProfiles
+/src/backend/Product/api/Properties/ServiceDependencies/rm-shop-products-api - Zip Deploy
