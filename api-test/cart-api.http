@@ -1,0 +1,21 @@
+POST http://localhost:7071/api/AddToCart
+
+{
+    "CartId": "",
+    "ProductId": "0f070cfc-e351-4d2d-9f3c-69b6fe6946a3",
+    "Units": 1
+}
+
+POST http://localhost:7071/api/GetCart
+
+{
+    "CartId": "8830d1a7-e3bc-4e2c-9e03-7d8a1db95af6"
+}
+
+POST http://localhost:7071/api/AddToCart
+
+{
+    "CartId": "8830d1a7-e3bc-4e2c-9e03-7d8a1db95af6",
+    "ProductId": "0f070cfc-e351-4d2d-9f3c-69b6fe6946a3",
+    "Units": 1
+}

@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <div class="input-placeholder">
+                        <input class="form-control" type="text" name="categorySearch" id="categorySearch" [(value)]="categorySearchTerm"
+                            placeholder="Category Search" />
+                        <a class="btn btn-outline-primary"  (click)="getAllProducts()"><span class="fa fa-search form-control-feedback"></span></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div *ngFor="let c of category">
+                        <a href="#">{{c.CategoryName}} ({{c.TotalProducts}})</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="card-header">
+                            <input class="form-control me-2" type="search" placeholder="Search Product" [(ngModel)]="productSearchTerm" 
+                                aria-label="Search">
+                                <a class="btn btn-outline-primary"  (click)="getAllProducts()"><span class="fa fa-search form-control-feedback"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row  row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+                        <div class="col" *ngFor="let p of products">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-8 col-md-10">
+                                            <img src="favicon.ico" class="rounded float-start" width="100%" height="200px">
+                                        </div>
+                                        <div class="col-lg-4 col-md-2">
+                                            <p class="float-end">INR {{p.Price}}</p>
+                                            <a href="#" class="btn btn-outline-primary float-end"
+                                                (click)="addToCart(p)">
+                                                <span class="fa fa-cart-plus form-control-feedback"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="card-text">{{p.ProductName}}
+                                            <a href="#">
+                                                <i class="fas fa-info-circle" title="View Details"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+POST http://localhost:7071/api/GetCategories
+
+{
+    "PageNo": 0,
+    "PageSize": 0
+}
+
+POST http://localhost:7071/api/GetAllProducts
+
+{
+    "PageNo": 1,
+    "PageSize": 50
+}
+
+POST http://localhost:7071/api/SearchProducts
+
+{
+    "PageNo": 1,
+    "PageSize": 50,
+    "SearchTerm": "apple"
+}
+
+POST http://localhost:7071/api/ProductDetails
+
+{
+    "ProductId": "0f070cfc-e351-4d2d-9f3c-69b6fe6946a3"
+}
+

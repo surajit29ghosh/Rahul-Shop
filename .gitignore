@@ -1,5 +1,7 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/src/backend/eShop.Utilities/bin/Debug
+**/bin
+**/obj
+**/.vs
+**/.vscode
