@@ -1,8 +1,9 @@
 POST http://localhost:7071/api/AddToCart
 
 {
-    "CartId": "",
-    "ProductId": "0f070cfc-e351-4d2d-9f3c-69b6fe6946a3",
+    "CartId": "c9839412-32d4-4b65-9652-3b360cacfb93",
+    "ProductId": "9c9df356-69e5-449d-82ae-0c47aba685b7",
+    "ProductName": "Boston Acoustics Duo-I AM/FM Clock Radio With iPod Dock - HDUOIMDNT",
     "Units": 1
 }
 

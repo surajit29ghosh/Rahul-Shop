@@ -98,9 +98,15 @@ namespace eShop.Cart.API.Repositories
         {
             var client = await GetCacheTable();
 
-            var item = await client.GetEntityAsync<CacheItemEntity>(customerId, productId);
+            Azure.Pageable<CacheItemEntity> items = client.Query<CacheItemEntity>(c => c.PartitionKey.Equals(customerId) && c.RowKey.Equals(productId));
 
-            return item;
+            if (items.GetEnumerator().Current != null)
+                return items.GetEnumerator().Current;
+            else
+                return null;
+            //var item = await client.GetEntityAsync<CacheItemEntity>(customerId, productId);
+
+            //return item;
 
         }
     }

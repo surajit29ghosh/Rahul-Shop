@@ -33,7 +33,7 @@ namespace eShop.Cart.API
 					return error;
 				}
 
-				AddCartModel model = JsonSerializerExtensions.CaseInsensitiveDeseialize<AddCartModel>(input);
+				AddCartModel model = JsonSerializer.Deserialize<AddCartModel>(input);
 
 				var repository = executionContext.InstanceServices.GetService(typeof(ICacheRepository)) as ICacheRepository;
 
