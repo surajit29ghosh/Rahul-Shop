@@ -5,3 +5,6 @@
 **/obj
 **/.vs
 **/.vscode
+/src/backend/Cart/API/Properties/PublishProfiles
+/src/backend/Cart/API/Properties/ServiceDependencies/rm-shop-cart-api - Zip Deploy/profile.arm.json
+/src/backend/Product/api/Properties/PublishProfiles

@@ -15,11 +15,13 @@ namespace api
         {
             var host = new HostBuilder()
                 .ConfigureFunctionsWorkerDefaults()
-                .ConfigureServices(services =>
+                .ConfigureServices((hosting, services) =>
 				{
+                    string dbConnection = hosting.Configuration.GetSection("DbConnection").Value;
                     services.AddDbContext<ProductDBContext>(options =>
                     {
-                        options.UseSqlServer("Server=SurajitG-LTP;Database=eShop;User Id=sa;Password=sa@123;");
+                        options.UseSqlServer(dbConnection);
+                        //options.UseSqlServer("Server=tcp:rm-shop-db-server.database.windows.net,1433;Initial Catalog=rm-shop-db;Persist Security Info=False;User ID=rm-shop-dba;Password=eStore@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                     });
 
                     services.AddScoped<IProductRepository, ProductRepository>();
