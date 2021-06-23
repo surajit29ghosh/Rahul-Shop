@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { SearchComponent } from './Views/search/search.component';
-import { ProductDetailsComponent } from './views/product-details/product-details.component';
+import { ProductDetailsComponent } from './Views/product-details/product-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},

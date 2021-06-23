@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './Views/search/search.component';
 import { FormsModule } from '@angular/forms';
-import { ProductDetailsComponent } from './views/product-details/product-details.component';
+import { ProductDetailsComponent } from './Views/product-details/product-details.component';
 
 @NgModule({
   declarations: [
