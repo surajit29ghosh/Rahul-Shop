@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-3 col-md-1"></div>
         <div class="col-lg-6 col-md-9">
-            <div class="card">
+            <div class="card" *ngIf="product">
                 <div class="card-header">
                     <h3>{{product.ProductName}}</h3>
                 </div>
@@ -23,7 +23,7 @@
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="2000">
-                            <img src="..." class="d-block w-100" alt="...">
+                            <img src="favicon.ico" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                               <h5>Second slide label</h5>
                               <p>Some representative placeholder content for the second slide.</p>
