@@ -36,4 +36,11 @@ export class ProductService {
                                   "PageSize": 0 
                               });
   }
+
+  getProductDetails(productId: string): Observable<any[]> {
+    return this.http.post<any[]>(this.productApiURL + 'productdetails'
+                                ,{
+                                  "ProductId": productId
+                              });
+  }
 }
