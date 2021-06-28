@@ -18,12 +18,12 @@ export class ProductDetailsComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       if(this.route.snapshot.paramMap.get('id'))
       {
-        this.productId = this.route.snapshot.paramMap.get('id');
+        this.productId = params['id'];
         this.productQuantity = 1;
       }
       else
       {
-        this.router.navigate(['/home']);
+        this.router.navigate(['home']);
       }
     });
    }

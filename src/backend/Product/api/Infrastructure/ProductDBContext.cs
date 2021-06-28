@@ -23,6 +23,8 @@ namespace eShop.Products.Api.Infrastructure
 
         public virtual DbSet<Model.Category> Categories { get; set; }
 
+        public virtual DbSet<Model.ProductVariant> ProductVariants { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //            if (!optionsBuilder.IsConfigured)
@@ -38,6 +40,7 @@ namespace eShop.Products.Api.Infrastructure
 
             modelBuilder.ApplyConfiguration(new ProductEntityConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductVariantEntityConfiguration());
 
             OnModelCreatingPartial(modelBuilder);
         }

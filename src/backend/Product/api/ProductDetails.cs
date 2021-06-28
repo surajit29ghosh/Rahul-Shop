@@ -41,7 +41,8 @@ namespace eShop.Products.Api
                      AvailableQuantity = data.AvailableQuantity,
                      Description = data.Description,
                      Image = data.Image,
-                     Price = data.Price
+                     Price = data.Price,
+                     MultiVariants = data.MultiVariants
                 };
 
             var response = req.CreateResponse(HttpStatusCode.OK);

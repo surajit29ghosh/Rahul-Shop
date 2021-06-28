@@ -36,6 +36,8 @@ namespace eShop.Products.Api.Infrastructure
 			builder.Property(e => e.Image)
 						.HasMaxLength(500);
 
+			builder.Property(e => e.MultiVariants).HasColumnName("MultiVariantProduct");
+
 			builder.HasOne(d => d.Category)
 					.WithMany(p => p.Products)
 					.HasForeignKey(d => d.CategoryId);

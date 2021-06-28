@@ -15,6 +15,8 @@ namespace eShop.Products.Api.Model
 		public int AvailableQuantity { get; set; }
 		public decimal? Price { get; set; }
 		public Guid CategoryId { get; set; }
+		public bool MultiVariants { get; set; }
 		public virtual Category Category { get; set; }
+		public IEnumerable<ProductVariant> Variants { get; set; }
 	}
 }

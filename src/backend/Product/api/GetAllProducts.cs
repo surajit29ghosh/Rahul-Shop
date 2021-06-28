@@ -60,7 +60,8 @@ namespace eShop.Products.Api
                 AvailableQuantity = s.AvailableQuantity,
                 Description = s.Description,
                 Image = s.Image,
-                Price = s.Price
+                Price = s.Price,
+                MultiVariants = s.MultiVariants
             }).ToList();
 
 			var response = req.CreateResponse(HttpStatusCode.OK);
